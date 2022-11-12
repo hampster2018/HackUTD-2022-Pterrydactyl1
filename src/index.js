@@ -1,7 +1,7 @@
 import React from 'react';
-import OauthLogin from "./OauthLogin";
+import ReactDOM from 'react-dom/client';
+import OauthLogin from './OAuth';
 import {createBrowserRouter, RouterProvider,} from 'react-router-dom';
-import ReactDOM from "react-dom/client"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
