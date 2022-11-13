@@ -12,8 +12,7 @@
     height: 425px;
     justify-content: center;
     align-items: center;
-    top: -5px
-
+    top: -5px;
 }
 
 #FirstSide {
@@ -32,28 +31,47 @@
 }
 
 #DidYou {
-  width: 500px;
+  width: 400px;
   height: 500px;
   align-self:flex-start;
   border-radius: 10px;
+  margin-right: 0px;
+  margin-left: -100px;
+  margin-bottom: 100px;
 }
 
-#deda {
+#Deda {
   width: 300px;
   height: 300px;
   align-self: center;
+  margin-top: -50px;
+  margin-left: 25px;
+}
+
+#AgencyText{
+  margin-top: -110px;
 }
 
 #South{
-  width: 1300px;
-  height: 740px;
+  width: 430px;
+  height: 500px;
   border-radius: 10px;
+  margin-right: 150px;
+  margin-left: 0px;
+  margin-bottom: 100px;
+  
 }
 #buuton {
   display: flex;
   align-self: center;
   justify-content: center;
+  width: 100%;
   
+}
+
+a{
+  color: white;
+  text-decoration: none;
 }
 
 #Oasis {
@@ -71,6 +89,47 @@ width: 100;
 
 #BostonTitle {
   text-align: left;
+  margin-left: 32px;
+  margin-bottom: -30px;
+}
+
+#BostonButton{
+  width: 400px;
+  height: 50px;
+  border: none;
+  background-color: rgb(29, 99, 29);
+  color: white;
+  border-radius: 100px;
+  font-size: 25px;
+  cursor: pointer;
+  margin-top: -20px;
+  margin-left: 40px;
+}
+
+#BostonText {
+  text-align: left;
+  margin-left: 10px;
+  margin-right: -80px;
+}
+
+#FirstSide{
+  margin-top: -40px;
+  margin-right: -150px;
+  height: 500px;
+  width: 500px;
+}
+
+#LastCard{
+  margin-top: 0px;
+  height: 500px;
+  width: 400px;
+}
+
+#AgencyHeader{
+  text-align: left;
+  margin-left: 32px;
+  margin-bottom: -30px;
+  margin-top: -10px;
 }
 
 .container{
