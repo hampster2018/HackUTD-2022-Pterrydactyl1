@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import OauthLogin from './OAuth';
 import {createBrowserRouter, RouterProvider,} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Map from './components/Map/Map.jsx'
 
 const router = createBrowserRouter([
     {
-    path: '/',
-    element: <OauthLogin/>
+        path: '/',
+        element: <Map/>
+    },
+    {
+        path: '/Map',
+        element: <Map/>
     }
 ,])
 
