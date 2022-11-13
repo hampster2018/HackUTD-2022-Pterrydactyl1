@@ -82,7 +82,7 @@ export default function Map() {
     return (
         <>
             <Navbar></Navbar>
-            <h1 id="MapTitle">Find locations Near You!</h1>
+            <h1 id="MapTitle">Find Locations Near You!</h1>
             <div id="map">
                 <MapContainer center={L.latLng(lat, lng)} zoom={15} scrollWheelZoom={true}>
                     <TileLayer

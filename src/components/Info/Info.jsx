@@ -2,7 +2,7 @@ import React from "react";
 import './Info.css';
 import Bonton from "../../assets/Bonton-1.png";
 import FirstSide from "../../assets/finalfirstg.png";
-import Deda from "../../assets/newdeda.png";
+import Deda from "../../assets/deda3.png";
 import DidYou from "../../assets/DidYouKnow.png";
 import South from "../../assets/south dallas.png";
 import Short from "../../assets/dedashort.pdf";
@@ -27,7 +27,7 @@ function Info() {
             <div id="BostonFarmsHeader">
               <h1 id="BostonTitle">Invest in Dallas!</h1>
               <p id="BostonText">Bonton Farms is a great example of a local farm and market that was able to impact the neighborhood of Bonton, which was known as a food desert for many years. Health issues were sky high, and there wasn't enough funding for this issue. Bonton Farms would not have been possible without help from a business investor.  </p>
-              <button id="BostonButton"> <a href="https://bontonfarms.org/"><u>Learn More About Bonton Farms</u></a></button>
+              <button id="BostonButton"> <a href="https://bontonfarms.org/"><u>Learn About Bonton Farms</u></a></button>
             </div>
             <a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/documentation/">
               <img src={FirstSide} alt="FirstSide" id="FirstSide"></img> </a>
@@ -53,8 +53,6 @@ function Info() {
                   </button>
                 </div>
               </div>
-            </div>
-            <div id="buuton">
             </div>
           </div>
         </div>

@@ -42,17 +42,16 @@
 }
 
 #Deda {
-  width: 600px;
-  height: 300px;
+  width: 500px;
+  height: 400px;
   align-self: center;
-  margin-top: -50px;
-  margin-left: 25px;
+  margin-top: -90px;
+  margin-bottom: -50px;
+  margin-left: 80px;
 }
 
 #AgencyText{
-  padding-left: 30px;
   padding-top: 40px;
-  padding-right: 20px;
   margin-top: -110px;
 }
 
@@ -61,20 +60,29 @@
   height: 500px;
   border-radius: 10px;
   margin-right: 120px;
-  margin-left: 5px;
+  margin-left: 0px;
   margin-bottom: 100px;
   
 }
 #buuton {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  width: 100%;
-  
+  width: 400px;
+  height: 50px;
+  border: none;
+  background-color: rgb(29, 99, 29);
+  color: white;
+  border-radius: 100px;
+  font-size: 25px;
+  cursor: pointer;
+  margin-top: -30px;
+  margin-left: 110px;
 }
 
 a{
   color: white;
+  text-decoration: none;
+}
+
+u{
   text-decoration: none;
 }
 
@@ -117,10 +125,11 @@ width: 100;
 }
 
 #FirstSide{
-  margin-top: -40px;
-  margin-right: -150px;
+  margin-top: 10px;
   height: 400px;
   width: 400px;
+  margin-right: -70px;
+  margin-left : 50px; 
 }
 
 #LastCard{
@@ -131,7 +140,6 @@ width: 100;
 
 #AgencyHeader{
   text-align: left;
-  margin-left: 32px;
   margin-bottom: -30px;
   margin-top: -10px;
 }
@@ -144,7 +152,7 @@ width: 100;
 
 Body{
   width: 100%;
-  
+  background-color: #dbffdb;
 }
 
 .firstcard {
