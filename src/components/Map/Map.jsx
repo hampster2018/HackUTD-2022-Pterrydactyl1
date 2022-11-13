@@ -3,17 +3,20 @@ import React from "react";
 import {
     MapContainer,
     TileLayer,
-    useMapEvents
+    useMapEvents,
+    Marker,
+    Popup
 } from "react-leaflet";
 import { useState, useEffect } from "react"
 import * as L from "leaflet";
 import Navbar from "../Navbar/Navbar";
 
-const data = {
+let data = [{
     "html_attributions": [],
     "next_page_token": "AW30NDzEyNqFGKYxBAOlOolrYnL9Q1bOHI9yBfONIKjDlUE-O-a63g6YJMz2ptRuyh_yNc-dtmoeb5qXUMQrKAJOtzH0yPkXjgMGLKntHnSjtq7gRd6uW-AGluqFoLrusRkdNCp98-Zjt2YBmznaLO0UZ7t9HjTAMDoWya8lViOPrl5rLo2vkne1dceVBxfi1FkxoXLlar18mPno6eZMcwqLrI9kGMyfrDpxtyy3DzXomVpxTn8m01K3p5xCEchXC8VM1SHS-KPE2qm6PLg_hRuQiniKyplv9poMLwUqn6MYu-OukdURnjN29NNx41cA6bgGbvhyOlPpGiWXGZSFxHvZNll-bStvw4JFZx_Eut8IdM6GuKoCiSgGc3xvyaFMcYvAPG90ZrvH-bDzAhAA2_o4R7hcV1UYhmXsjaCR9fnOIr89iJ6IkyFuQVFRvZFFpCVr",
     "results": [
         {
+            "key": 1,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -70,6 +73,7 @@ const data = {
             "vicinity": "10810 Ferguson Rd #2616, Dallas"
         },
         {
+            "key": 2,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -115,6 +119,7 @@ const data = {
             "vicinity": "4702 E Grand Ave, Dallas"
         },
         {
+            "key": 3,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -170,6 +175,7 @@ const data = {
             "vicinity": "1885 Esters Rd #110, Irving"
         },
         {
+            "key": 4,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -225,6 +231,7 @@ const data = {
             "vicinity": "2410 Brady Ln, Grand Prairie"
         },
         {
+            "key": 5,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -278,6 +285,7 @@ const data = {
             "vicinity": "1406 E Overton Rd, Dallas"
         },
         {
+            "key": 6,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -321,6 +329,7 @@ const data = {
             "vicinity": "4203 Dalton Dr, Dallas"
         },
         {
+            "key": 7,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -364,6 +373,7 @@ const data = {
             "vicinity": "Cedar Springs Rd, Dallas"
         },
         {
+            "key": 8,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -417,6 +427,7 @@ const data = {
             "vicinity": "3195 S Great Trinity Forest Way, Dallas"
         },
         {
+            "key": 9,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -470,6 +481,7 @@ const data = {
             "vicinity": "401 E Pioneer Dr, Irving"
         },
         {
+            "key": 10,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -523,6 +535,7 @@ const data = {
             "vicinity": "454 E Wheatland Rd, Duncanville"
         },
         {
+            "key": 11,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -577,6 +590,7 @@ const data = {
             "vicinity": "2827 Live Oak St, Dallas"
         },
         {
+            "key": 12,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -620,6 +634,7 @@ const data = {
             "vicinity": "750415702, 4517 Saturn Rd, Garland"
         },
         {
+            "key": 13,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -664,6 +679,7 @@ const data = {
             "vicinity": "2500 Lawrence St, Dallas"
         },
         {
+            "key": 14,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -707,6 +723,7 @@ const data = {
             "vicinity": "1120 E Red Bird Ln, Dallas"
         },
         {
+            "key": 15,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -750,6 +767,7 @@ const data = {
             "vicinity": "Sunbelt Dr, Addison"
         },
         {
+            "key": 16,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -793,6 +811,7 @@ const data = {
             "vicinity": "3326 Irving Blvd, Dallas"
         },
         {
+            "key": 17,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -836,6 +855,7 @@ const data = {
             "vicinity": "Haltom City"
         },
         {
+            "key": 18,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -885,6 +905,7 @@ const data = {
             "vicinity": "2800 Forestwood Dr, Arlington"
         },
         {
+            "key": 19,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -928,6 +949,7 @@ const data = {
             "vicinity": "3140 Cedar Crest Blvd, Dallas"
         },
         {
+            "key": 20,
             "business_status": "OPERATIONAL",
             "geometry": {
                 "location": {
@@ -983,7 +1005,7 @@ const data = {
         }
     ],
     "status": "OK"
-}
+}];
 
 export default function Map() {
     const [render, setRender] = useState(null)
@@ -1010,41 +1032,6 @@ export default function Map() {
         return <></>;
     };
 
-    const [storeData, setStoreData] = useState([]);
-    const getStoreData = () => {
-        const API_KEY = process.env.REACT_APP_GOOGLE_MAP
-        const URL = `https://glacial-bastion-99092.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/`;
-        let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        headers.append('Accept', 'application/json');
-
-        fetch(URL, {
-            method: 'POST',
-            body: JSON.stringify({
-                key: API_KEY,
-                location: [{ lat }, { lng }],
-                radius: 10000,
-                type: "grocery store"
-            }),
-            headers: {headers}
-        })
-            .then((res) => {
-                res.json();
-                console.log(res.json())
-            })
-            .then((post) => {
-                console.log(post)
-            })
-            .catch((err) => {
-                console.log(err.message);
-            });
-    }
-
-    useEffect(() => {
-        getStoreData();
-
-    })
-
     navigator.geolocation.getCurrentPosition(
         function (position) {
             console.log(position);
@@ -1053,7 +1040,13 @@ export default function Map() {
         }
     );
 
-
+    const items = data[0].results.map((d) => 
+        <Marker key={d.key} map='map' position={L.latLng(d.geometry.location.lat, d.geometry.location.lng)}>
+            <Popup>
+                <span>A pretty CSS3 popup. <br /> Easily customizable.</span>
+            </Popup>
+        </Marker>
+    );
 
     return (
         <>
@@ -1065,7 +1058,7 @@ export default function Map() {
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                    <Marker position=
+                    {items}
                     {<GetLatLngFromClick />}
                 </MapContainer>
             </div>
