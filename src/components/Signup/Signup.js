@@ -9,24 +9,26 @@ const Signup = () => {
         <>
             <div>
                 <Navbar></Navbar>
-            </div>,
-            <div className ="signup-container">
-            <form>
-                <h1 id="RegisterTitle">Register</h1>
-                <FormInput placeholder= "Address"/>
-                <h1> </h1>
-                <FormInput placeholder= "Email"/>
-                <h1> </h1>
-                <FormInput placeholder= "Full Name"/>
-                <h1> </h1>
-                <FormInput placeholder= "Age"/>
-                <h1> </h1>
-                <button type="button" onClick={()=>setShow(!show)}>Submit </button>
-                {
-                    show && <p> Successfully Registered! </p>
-                }
-            </form>
-            </div>;
+            </div>
+            <div className='signupContainer'>
+                <div className="signup">
+                    <form>
+                        <h1 id="RegisterTitle">Register</h1>
+                        <FormInput placeholder="Address" />
+                        <h1> </h1>
+                        <FormInput placeholder="Email" />
+                        <h1> </h1>
+                        <FormInput placeholder="Full Name" />
+                        <h1> </h1>
+                        <FormInput placeholder="Age" />
+                        <h1> </h1>
+                        <button type="button" onClick={() => setShow(!show)}>Submit </button>
+                        {
+                            show && <p> Successfully Registered! </p>
+                        }
+                    </form>
+                </div>;
+            </div>
         </>
     )
 };

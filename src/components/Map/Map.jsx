@@ -37,7 +37,7 @@ export default function Map() {
     const [storeData, setStoreData] = useState([]);
     const getStoreData = () => {
         const API_KEY = process.env.REACT_APP_GOOGLE_MAP
-        const URL = `https://maps.googleapis.com/maps/api/place/nearbysearch/`;
+        const URL = `https://glacial-bastion-99092.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/`;
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Accept', 'application/json');
