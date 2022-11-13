@@ -14,7 +14,7 @@ const Navbar = () => {
             </NavMenu>
             <NavBtn>
                 <NavBtnLink to="/info">
-                    Info
+                    Home
                 </NavBtnLink>
                 <NavBtnLink to="/signup">
                     Register
