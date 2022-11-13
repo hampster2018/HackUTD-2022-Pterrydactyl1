@@ -4,11 +4,13 @@ import {createBrowserRouter, RouterProvider,} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Signup from './components/Signup/Signup.js';
 import Info from './components/Info/Info.jsx';
+import OAuth from './components/OAuth/OAuth';
+import Map from './components/Map/Map';
 
 const router = createBrowserRouter([
     {
-    path: '/',
-    element: <Info/>
+        path: '/',
+        element: <OAuth/>
     },
     {
         path: '/info',
@@ -17,6 +19,10 @@ const router = createBrowserRouter([
     {
         path: '/signup',
         element: <Signup/>
+    },
+    {
+    path: '/map',
+        element: <Map/>
     }
 ,])
 

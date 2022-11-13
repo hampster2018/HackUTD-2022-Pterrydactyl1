@@ -15,9 +15,9 @@ import BostonFarms from "../../assets/BostonFarms.png";
 function Info() {
   return (
     <>
-    <body class="Body">
+    <div class="Body">
       <div><Navbar></Navbar></div>,
-      <div className="App">
+      <div class="App">
 
         <img src={Bonton} alt="Bonton" id="Bonton" />
 
@@ -43,7 +43,7 @@ function Info() {
         </h3>
         <div class="card">
 
-          <div className="firstcard">
+          <div class="firstcard">
             <a href="https://www.dallasecodev.org/263/Public-Private-Partnership-Program"><img src={Deda} alt="Deda" id="Deda" /></a>
             <p>
               Grocery stores located in or near food deserts may eligible for financial assistance as part of
@@ -53,7 +53,7 @@ function Info() {
               <button>
                 <h4>
                   <b>
-                    <a href={Short} target="_blank">Application</a>
+                    <a href={Short}>Application</a>
                   </b>
                 </h4>
               </button>
@@ -64,7 +64,7 @@ function Info() {
         </div>
 
       </div>
-    </body>
+    </div>
 
     </>
 
