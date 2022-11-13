@@ -1,4 +1,3 @@
-
 .App {
   display: flex;
   flex-direction: column;
@@ -6,12 +5,14 @@
   margin-left: 20px;
   margin-right: 20px;
 }
+
 #Bonton {
     position: relative;
-    width: 1300px;
-    height: 400px;
+    width: 100%;
+    height: 425px;
     justify-content: center;
     align-items: center;
+    top: -5px
 
 }
 
@@ -57,17 +58,37 @@
 
 #Oasis {
 position: absolute;
-grid-area: 1/1/2/2;
-top: 0;
-left: 200px;
+top: 100px;
+height: 100;
+width: 100;
 }
 
+#BostonFarms {
+  height: 400px;
+  width: 400px;
+  margin-left: -77px;
+}
+
+#BostonTitle {
+  text-align: left;
+}
+
+.container{
+  display:flex;
+  margin: 15px 15px;
+  justify-content: left;
+}
+
+Body{
+  width: 100%;
+  
+}
 
 .firstcard {
   justify-content: right;
 }
 h4 {
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 .card {
@@ -88,6 +109,7 @@ h4 {
   
   .container {
     padding: 2px 16px;
+    
     
   }
 .buttonim {

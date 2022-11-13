@@ -15,16 +15,17 @@ import BostonFarms from "../../assets/BostonFarms.png";
 function Info() {
   return (
     <>
+    <body class="Body">
       <div><Navbar></Navbar></div>,
       <div className="App">
 
         <img src={Bonton} alt="Bonton" id="Bonton" />
 
         <img src={Oasis} alt="Oasis" id="Oasis" />
-        <div class ="container">
+        <div class="container">
           <img src={BostonFarms} alt="BostonFarms" id="BostonFarms" />
           <div class="BostonFarmsHeader">
-            <h1>Boston Farms</h1>
+            <h1 id="BostonTitle">Boston Farms</h1>
             <p>Boston Farms is a great example of an organization working towards providing nutricious meals for people in low-income communities. Boston is located in a food desert but through Boston Farms, the community has access to fresh produce. </p>
           </div>
         </div>
@@ -63,6 +64,7 @@ function Info() {
         </div>
 
       </div>
+    </body>
 
     </>
 
