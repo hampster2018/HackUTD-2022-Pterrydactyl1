@@ -1,8 +1,11 @@
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { GoogleLogin } from "@react-oauth/google";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function OauthLogin() {
+
+    const navigate = useNavigate()
 
     const clientID = process.env.REACT_APP_CLIENT_ID;
     const [oauthToken, setOauthToken] = useState(null);
@@ -10,18 +13,19 @@ export default function OauthLogin() {
     // Hook to update the users info once the google login is completed
     useEffect(() => {
         async function handleLogin() {
-            console.login("Success")
+            console.log("Success")
+            navigate('/info')
         }
         handleLogin() 
-    }, [oauthToken])    
+    }, [oauthToken, navigate])    
     return (
-        <div>
-        <GoogleOAuthProvider clientId={clientID}>
-            <GoogleLogin
-              onSuccess={(data) => setOauthToken(data.credential)}
-              onError={() => {}}
-        />
-        </GoogleOAuthProvider>
+        <div id="AuthContainer">
+            <GoogleOAuthProvider clientId={clientID}>
+                <GoogleLogin
+                  onSuccess={(data) => setOauthToken(data.credential)}
+                  onError={() => {}}
+            />
+            </GoogleOAuthProvider>
         </div>
     )
 }

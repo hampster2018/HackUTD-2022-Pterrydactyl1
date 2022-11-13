@@ -19,6 +19,9 @@ const Navbar = () => {
                 <NavBtnLink to="/signup">
                     Register
                 </NavBtnLink>
+                <NavBtnLink to="/map">
+                    Find Locations
+                </NavBtnLink>
             </NavBtn>
           </Nav>
         </>
